@@ -1,0 +1,3 @@
+
+
+GET http://localhost:4004/odata/v4/GameService/BoardSquares?$filter=snakeTo localhost:4004/odata/v4/GameService/BoardSquares?$filter=snakeTo gt 0
