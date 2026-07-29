@@ -1,3 +1,122 @@
+# GET http://localhost:4004/odata/v4/GameService/BoardSquares?$filter=snakeTo localhost:4004/odata/v4/GameService/BoardSquares?$filter=snakeTo gt 0
+
+# POST http://localhost:4004/odata/v4/game/Players(ID=d4e5f6a1-0001-0000-0000-000000000001)/startTurn
+# Content-Type: application/json
+
+# {}
 
 
-GET http://localhost:4004/odata/v4/GameService/BoardSquares?$filter=snakeTo localhost:4004/odata/v4/GameService/BoardSquares?$filter=snakeTo gt 0
+PATCH http://localhost:4004/odata/v4/game/Players(ID=d4e5f6a1-0001-0000-0000-000000000001)
+Content-Type: application/json
+
+{ "position": 88 }
+
+# ### 1. Oyuncu (Kerem) EKLENDİ
+# POST http://localhost:4004/odata/v4/game/Players
+# Content-Type: application/json
+
+# {
+#   "ID": "d4e5f6a1-0001-0000-0000-000000000001",
+#   "session_ID": "a1b2c3d4-0001-0000-0000-000000000000",
+#   "name": "Kerem",
+#   "turnOrder": 1
+# }
+
+# ### 2. Oyuncu (Aslı)
+# POST http://localhost:4004/odata/v4/game/Players
+# Content-Type: application/json
+
+# {
+#   "ID": "d4e5f6a1-0001-0000-0000-000000000002",
+#   "session_ID": "a1b2c3d4-0001-0000-0000-000000000000",
+#   "name": "Aslı",
+#   "turnOrder": 2
+# }
+
+# ### 3. Oyuncu (Mert)
+# POST http://localhost:4004/odata/v4/game/Players
+# Content-Type: application/json
+
+# {
+#   "ID": "d4e5f6a1-0001-0000-0000-000000000003",
+#   "session_ID": "a1b2c3d4-0001-0000-0000-000000000000",
+#   "name": "Mert",
+#   "turnOrder": 3
+# }
+
+# ### 4. Oyuncu (Ceren)
+# POST http://localhost:4004/odata/v4/game/Players
+# Content-Type: application/json
+
+# {
+#   "ID": "d4e5f6a1-0001-0000-0000-000000000004",
+#   "session_ID": "a1b2c3d4-0001-0000-0000-000000000000",
+#   "name": "Ceren",
+#   "turnOrder": 4
+# }
+
+# ### 5. Oyuncu (Ozan)
+# POST http://localhost:4004/odata/v4/game/Players
+# Content-Type: application/json
+
+# {
+#   "ID": "d4e5f6a1-0001-0000-0000-000000000005",
+#   "session_ID": "a1b2c3d4-0001-0000-0000-000000000000",
+#   "name": "Ozan",
+#   "turnOrder": 5
+# }
+
+# ### 6. Oyuncu (Selin)
+# POST http://localhost:4004/odata/v4/game/Players
+# Content-Type: application/json
+
+# {
+#   "ID": "d4e5f6a1-0001-0000-0000-000000000006",
+#   "session_ID": "a1b2c3d4-0001-0000-0000-000000000000",
+#   "name": "Selin",
+#   "turnOrder": 6
+# }
+
+# ### 7. Oyuncu (Umut)
+# POST http://localhost:4004/odata/v4/game/Players
+# Content-Type: application/json
+
+# {
+#   "ID": "d4e5f6a1-0001-0000-0000-000000000007",
+#   "session_ID": "a1b2c3d4-0001-0000-0000-000000000000",
+#   "name": "Umut",
+#   "turnOrder": 7
+# }
+
+# ### 8. Oyuncu (Gizem)
+# POST http://localhost:4004/odata/v4/game/Players
+# Content-Type: application/json
+
+# {
+#   "ID": "d4e5f6a1-0001-0000-0000-000000000008",
+#   "session_ID": "a1b2c3d4-0001-0000-0000-000000000000",
+#   "name": "Gizem",
+#   "turnOrder": 8
+# }
+
+# ### 9. Oyuncu (Taha)
+# POST http://localhost:4004/odata/v4/game/Players
+# Content-Type: application/json
+
+# {
+#   "ID": "d4e5f6a1-0001-0000-0000-000000000009",
+#   "session_ID": "a1b2c3d4-0001-0000-0000-000000000000",
+#   "name": "Taha",
+#   "turnOrder": 9
+# }
+
+# ### 10. Oyuncu (Nil)
+# POST http://localhost:4004/odata/v4/game/Players
+# Content-Type: application/json
+
+# {
+#   "ID": "d4e5f6a1-0001-0000-0000-00000000000a",
+#   "session_ID": "a1b2c3d4-0001-0000-0000-000000000000",
+#   "name": "Nil",
+#   "turnOrder": 10
+# }

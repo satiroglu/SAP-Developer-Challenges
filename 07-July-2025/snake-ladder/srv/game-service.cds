@@ -14,7 +14,7 @@ service GameService {
 
     @from: [ #Playing ]
     @to: #Moving
-    action rollDice() returns Integer;
+    action rollDice() returns { roll: Integer; position: Integer; event: String; };
 
     @from: [ #Moving ]
     @to: #Waiting                  // transitions to next player in Week 3
@@ -31,7 +31,23 @@ service GameService {
     @from: [ #Moving ]
     @to: #Finished
     action winGame();
+
+    @from: [ #Blocked ]
+    @to: $flow.previous
+    action skipTurn();
   }
 
   entity BoardSquares as projection on snakeladder.BoardSquares;
+}
+// Domain events — emitted by handlers, consumed in Week 3
+event BoardEvent {
+  playerID : UUID;
+  type     : String;   // 'ladder' | 'snake' | 'doubleSnake'
+  ![from]  : Integer;  // 'from' is a CDS reserved word — escape with ![]
+  ![to]    : Integer;
+}
+
+event GameWon {
+  playerID  : UUID;
+  sessionID : UUID;
 }
